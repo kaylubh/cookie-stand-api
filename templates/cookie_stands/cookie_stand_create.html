@@ -7,16 +7,16 @@
     class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
     <form class="space-y-6" method="POST">
       {% csrf_token %}
-      <h5 class="text-xl font-medium text-gray-900 dark:text-white">Create a Thing</h5>
+      <h5 class="text-xl font-medium text-gray-900 dark:text-white">Create a Cookie Stand</h5>
       <div>
-        <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thing Name</label>
+        <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cookie Stand Name</label>
         <input type="text" name="name" id="id_name"
                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                placeholder="e.g. celery" required>
 
       </div>
       <div>
-        <label for="id_rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Thing Rating</label>
+        <label for="id_rating" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cookie Stand Rating</label>
         <input type="number" name="rating" id="id_rating"
                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                value="0" min="0" max="5" required>

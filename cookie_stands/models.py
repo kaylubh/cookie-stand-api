@@ -3,7 +3,7 @@ from django.db import models
 from django.urls import reverse
 
 
-class Thing(models.Model):
+class CookieStand(models.Model):
     name = models.CharField(max_length=256)
     rating = models.IntegerField(default=0, blank=True)
     reviewer = models.ForeignKey(
@@ -15,5 +15,5 @@ class Thing(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('thing_detail', args=[str(self.id)])
+        return reverse('cookie_stand_detail', args=[str(self.id)])
 
