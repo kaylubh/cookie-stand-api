@@ -11,7 +11,7 @@
       {% for cookie_stand in cookie_stands %}
         <a href="{% url 'cookie_stand_detail' cookie_stand.pk %}" aria-current="true"
            class="block w-full px-4 py-4 text-white bg-blue-700 border-b border-gray-200 rounded-t-lg cursor-pointer dark:bg-gray-800 dark:border-gray-600">
-          {{ cookie_stand.name }}
+          {{ cookie_stand.location }}
         </a>
       {% endfor %}
     </div>

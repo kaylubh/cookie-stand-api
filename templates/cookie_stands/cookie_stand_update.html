@@ -14,10 +14,10 @@
       {% csrf_token %}
       <h5 class="text-xl font-medium text-gray-900 dark:text-white">Update a Cookie Stand</h5>
       <div>
-        <label for="id_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-        <input type="text" name="name" id="id_name"
+        <label for="id_location" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Location</label>
+        <input type="text" name="location" id="id_location"
                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-               required value="{{ cookie_stand.name }}">
+               required value="{{ cookie_stand.location }}">
 
       </div>
       <div>
@@ -27,10 +27,10 @@
                value="{{ cookie_stand.rating }}" min="0" max="5" required>
       </div>
       <div>
-        <label for="id_reviewer" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Reviewer</label>
-        <select name="reviewer" id="id_reviewer">
-          {% for value, choice in form.fields.reviewer.choices %}
-            <option value="{{ value }}" {% if value == cookie_stand.reviewer.id %}selected{% endif %}>{{ choice }}</option>
+        <label for="id_owner" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Owner</label>
+        <select name="owner" id="id_owner">
+          {% for value, choice in form.fields.owner.choices %}
+            <option value="{{ value }}" {% if value == cookie_stand.owner.id %}selected{% endif %}>{{ choice }}</option>
           {% endfor %}
         </select>
       </div>
